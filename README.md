@@ -50,6 +50,7 @@ Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/pr
 1. RSS Feeds : The test cases check if a. RSS Feeds are defined
                                        b. URL of the feed is defined and have some value.
                                        c. Names of the feeds have some value.
+                                       
 2.The Menu:  The Menu on the left upper corner:
                                         a. is hidden by default on loading.
                                         b. is hidden/visible on clicking the menu icon.
