@@ -31,29 +31,69 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-
+         it('URL defined and not empty',function(){
+             allFeeds.forEach(function(feed){
+                 expect(feed.url).toBeDefined();
+                 expect(feed.url.length).not.toBe(0);
+             });
+             
+            });
 
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+        
+         it('name defined and not empty',function(){
+             allFeeds.forEach(function(feed){
+                 expect(feed.name).toBeDefined();
+                 expect(feed.name.length).not.toBe(0);
+             });
+             
+            });
+        
+        
+        
+        
+        
     });
 
 
     /* TODO: Write a new test suite named "The menu" */
 
+    
+     describe('The Menu', function() {
+        
+    
+    
+    
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
 
+         it('Menu is hidden by default',function(){
+             
+               expect($('body.menu-hidden').css('visibility')).toBe('visible');
+             
+             
+         });
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
-
+           it('Toggle Menu',function(){
+             
+                   $('body.menu-icon-link').trigger('click');
+                           
+                  expect($('body.menu-hidden').css('visibility')).toBe('visible');
+             
+         });
+       
+         
+    });   
     /* TODO: Write a new test suite named "Initial Entries" */
 
         /* TODO: Write a test that ensures when the loadFeed
@@ -69,4 +109,39 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-}());
+
+     describe('Initial Entries', function(){
+          beforeEach(function(done){
+                  
+                  loadFeed(0,done);
+                
+              });
+         it('at least one entry',function(){
+             expect($('.feed').length).not.toBe(0);
+             
+         });
+         
+     });
+
+     describe('New Feed Selection', function(){
+         
+          beforeEach(function(done){
+                  
+                  loadFeed(0);
+                  loadFeed(1);
+                 loadFeed(2,done);
+           
+              
+              });
+         it('content actually changes',function(){
+                const fd1 = $('.feed')[0].children[0].innerText;
+                const fd2 = $('.feed')[0].children[1].innerText;
+                expect(fd1 === fd2).toBe(false);
+             
+            
+         });
+         
+     });
+
+     
+     }());
