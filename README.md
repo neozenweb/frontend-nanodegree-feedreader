@@ -46,3 +46,16 @@ Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/pr
 19. Implement error handling for undefined variables and out-of-bound array access.
 20. When complete - all of your tests should pass. 
 21. Write a README file detailing all steps required to successfully run the application. If you have added additional tests (for Udacious Test Coverage),  provide documentation for what these future features are and what the tests are checking for.
+# Completed Jasmine Testing Specifications 
+1. RSS Feeds : The test cases check if a. RSS Feeds are defined
+                                       b. URL of the feed is defined and have some value.
+                                       c. Names of the feeds have some value.
+2.The Menu:  The Menu on the left upper corner:
+                                        a. is hidden by default on loading.
+                                        b. is hidden/visible on clicking the menu icon.
+                                        
+3.The initial entries on the page:
+                                        a. At least one entry is loaded from the feeds.
+                                        
+4. On selecting a new feed
+                                        a.content actually changes
