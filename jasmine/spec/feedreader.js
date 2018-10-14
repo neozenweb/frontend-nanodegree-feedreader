@@ -59,8 +59,7 @@ $(function() {
 
          it('Menu is hidden by default',function(){
              
-              // expect($('body.menu-hidden').css('visibility')).toBe('visible');
-             expect($('body').hasClass("menu-hidden")).toBe(true);
+              expect($('body').hasClass("menu-hidden")).toBe(true);
              
              
          });
