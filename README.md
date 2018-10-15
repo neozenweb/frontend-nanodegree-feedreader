@@ -22,6 +22,8 @@ You will learn how to use Jasmine to write a number of tests against a pre-exist
 
 
 # Completed Jasmine Testing Specifications 
+After cloning the git repository from https://github.com/neozenweb/frontend-nanodegree-feedreader, the index file is opened in the browser to check the test cases. On successful completion of the tests, the Jasmine specs data at the bottom of the page will show the number of specs tested and no failures. The following tests have been incorporated:
+
 1. RSS Feeds : The test cases check if a. RSS Feeds are defined
                                        b. URL of the feed is defined and have some value.
                                        c. Names of the feeds have some value.
