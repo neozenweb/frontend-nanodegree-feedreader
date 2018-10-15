@@ -84,7 +84,7 @@ $(function() {
                 
               });
          it('at least one entry',function(){
-             expect($('.feed .entry')[0].length).not.toBe(0);
+             expect($('.feed .entry').length).not.toBe(0);
              
          });
          
@@ -96,11 +96,11 @@ $(function() {
           beforeEach(function(done){
                    
                    loadFeed(0,function(){
-                   feed1 = $('.feed .entry')[0].innerText;
-                   loadFeed(1,function(){
-                   feed2 = $('.feed .entry')[0].innerText;
-                   done();
-                          });
+                            feed1 = $('.feed .entry')[0].innerText;
+                            loadFeed(1,function(){
+                                        feed2 = $('.feed .entry')[0].innerText;
+                                        done();
+                             });
                     });
                
               });
